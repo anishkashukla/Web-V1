@@ -131,6 +131,48 @@
             display: flex;
             flex: 1 1 auto;
         }
+
+        .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
     </style>
 </head>
 
@@ -139,6 +181,10 @@
         <div class="container-fluid 0" style="height: inherit;">
             <h4 class="text-white p-4" style="font-family: 'Raleway', sans-serif;">18 JUNE, 2019</h4>
             <h1 class="blog-title pl-4">Lorem Ipsum Dolor Sit Amet</h1>
+            <div class="btn-container" style="text-align: center;">
+                <button class="button" style="vertical-align:middle"><span>Sign Up </span></button>
+                <button class="button" style="vertical-align:middle"><span>Log In </span></button>
+            </div>
         </div>
     </div>
     <div class="container-fluid mt-5 main-container">
